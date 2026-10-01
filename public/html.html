@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/output.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<nav class="flex-1" aria-label="Primary sidebar navigation">
+
+    <!-- Dashboard -->
+    <div>
+        <a href="#"
+           class="flex items-center gap-2.5 w-full text-sm text-slate-800 font-medium
+                  hover:text-slate-900 hover:bg-slate-100 rounded-md px-3 py-2
+                  transition-colors">
+
+            <!-- Dashboard icon -->
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="size-[18px] fill-current"
+                 viewBox="0 0 24 24">
+                <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+            </svg>
+
+            <span>Dashboard</span>
+        </a>
+    </div>
+
+
+    <!-- Students -->
+    <div>
+        <button type="button"
+            aria-controls="students-menu"
+            aria-expanded="false"
+            class="flex items-center gap-2.5 cursor-pointer w-full text-sm text-slate-800
+                   font-medium text-left collapsible-toggle hover:text-slate-900
+                   hover:bg-slate-100 rounded-md px-3 py-2 transition-colors">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="size-[18px] fill-current"
+                 viewBox="0 0 24 24">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4
+                         1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8
+                         1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+
+            <span class="flex-1">Students</span>
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="arrow size-3 -rotate-90 fill-current transition-all"
+                 viewBox="0 0 24 24">
+                <path d="M12.016 18a1.5 1.5 0 0 1-1.065-.434l-9-9
+                         a1.506 1.506 0 0 1 2.13-2.13l7.935
+                         7.95L19.95 6.45a1.5 1.5 0 0 1 2.115
+                         2.115l-9 9a1.5 1.5 0 0 1-1.05.435"/>
+            </svg>
+        </button>
+
+        <ul id="students-menu"
+            class="space-y-1 text-sm text-slate-600 font-medium px-3 my-1
+                   max-h-0 overflow-hidden transition-all duration-300">
+
+            <li>
+                <a href="#" class="block hover:text-slate-900 hover:bg-slate-100
+                    rounded-md px-3 py-2 transition-colors">
+                    All Students
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="block hover:text-slate-900 hover:bg-slate-100
+                    rounded-md px-3 py-2 transition-colors">
+                    Add Student
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="block hover:text-slate-900 hover:bg-slate-100
+                    rounded-md px-3 py-2 transition-colors">
+                    Student Profiles
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="block hover:text-slate-900 hover:bg-slate-100
+                    rounded-md px-3 py-2 transition-colors">
+                    Student Cards
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- Academics -->
+    <div>
+        <button type="button"
+            aria-controls="academics-menu"
+            aria-expanded="false"
+            class="flex items-center gap-2.5 cursor-pointer w-full text-sm text-slate-800
+                   font-medium text-left collapsible-toggle hover:text-slate-900
+                   hover:bg-slate-100 rounded-md px-3 py-2 transition-colors">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="size-[18px] fill-current"
+                 viewBox="0 0 24 24">
+                <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12
+                         3zm0 9.99L5.74 9.58 12 6.17l6.26
+                         3.41L12 12.99zM5 13.18v4.04l7 3.82
+                         7-3.82v-4.04l-7 3.82-7-3.82z"/>
+            </svg>
+
+            <span class="flex-1">Academics</span>
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="arrow size-3 -rotate-90 fill-current"
+                 viewBox="0 0 24 24">
+                <path d="M12.016 18a1.5 1.5 0 0 1-1.065-.434l-9-9
+                         a1.506 1.506 0 0 1 2.13-2.13l7.935
+                         7.95L19.95 6.45a1.5 1.5 0 0 1 2.115
+                         2.115l-9 9a1.5 1.5 0 0 1-1.05.435"/>
+            </svg>
+        </button>
+
+        <ul id="academics-menu"
+            class="space-y-1 text-sm text-slate-600 font-medium px-3 my-1
+                   max-h-0 overflow-hidden transition-all duration-300">
+
+            <li><a href="#" class="block hover:bg-slate-100 rounded-md px-3 py-2">
+                Classes
+            </a></li>
+
+            <li><a href="#" class="block hover:bg-slate-100 rounded-md px-3 py-2">
+                Subjects
+            </a></li>
+
+            <li><a href="#" class="block hover:bg-slate-100 rounded-md px-3 py-2">
+                Exams
+            </a></li>
+
+            <li><a href="#" class="block hover:bg-slate-100 rounded-md px-3 py-2">
+                Results
+            </a></li>
+        </ul>
+    </div>
+
+
+    <!-- Attendance -->
+    <div>
+        <button type="button"
+            aria-controls="attendance-menu"
+            aria-expanded="false"
+            class="flex items-center gap-2.5 cursor-pointer w-full text-sm text-slate-800
+                   font-medium text-left collapsible-toggle hover:bg-slate-100
+                   rounded-md px-3 py-2">
+
+            <span class="flex-1">Attendance</span>
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="arrow size-3 -rotate-90 fill-current"
+                 viewBox="0 0 24 24">
+                <path d="M12.016 18a1.5 1.5 0 0 1-1.065-.434l-9-9
+                         a1.506 1.506 0 0 1 2.13-2.13l7.935
+                         7.95L19.95 6.45a1.5 1.5 0 0 1 2.115
+                         2.115l-9 9a1.5 1.5 0 0 1-1.05.435"/>
+            </svg>
+        </button>
+
+        <ul id="attendance-menu"
+            class="space-y-1 text-sm text-slate-600 font-medium px-3 my-1
+                   max-h-0 overflow-hidden transition-all duration-300">
+
+            <li><a href="#" class="block hover:bg-slate-100 rounded-md px-3 py-2">
+                Mark Attendance
+            </a></li>
+
+            <li><a href="#" class="block hover:bg-slate-100 rounded-md px-3 py-2">
+                Attendance Records
+            </a></li>
+
+            <li><a href="#" class="block hover:bg-slate-100 rounded-md px-3 py-2">
+                Attendance Reports
+            </a></li>
+        </ul>
+    </div>
+
+
+    <!-- Reports -->
+    <div>
+        <button type="button"
+            aria-controls="reports-menu"
+            aria-expanded="false"
+            class="flex items-center gap-2.5 cursor-pointer w-full text-sm text-slate-800
+                   font-medium text-left collapsible-toggle hover:bg-slate-100
+                   rounded-md px-3 py-2">
+
+            <span class="flex-1">Reports</span>
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="arrow size-3 -rotate-90 fill-current"
+                 viewBox="0 0 24 24">
+                <path d="M12.016 18a1.5 1.5 0 0 1-1.065-.434l-9-9
+                         a1.506 1.506 0 0 1 2.13-2.13l7.935
+                         7.95L19.95 6.45a1.5 1.5 0 0 1 2.115
+                         2.115l-9 9a1.5 1.5 0 0 1-1.05.435"/>
+            </svg>
+        </button>
+
+        <ul id="reports-menu"
+            class="space-y-1 text-sm text-slate-600 font-medium px-3 my-1
+                   max-h-0 overflow-hidden transition-all duration-300">
+
+            <li><a href="#" class="block hover:bg-slate-100 rounded-md px-3 py-2">
+                Student Reports
+            </a></li>
+
+            <li><a href="#" class="block hover:bg-slate-100 rounded-md px-3 py-2">
+                Academic Reports
+            </a></li>
+
+            <li><a href="#" class="block hover:bg-slate-100 rounded-md px-3 py-2">
+                Attendance Reports
+            </a></li>
+
+            <li><a href="#" class="block hover:bg-slate-100 rounded-md px-3 py-2">
+                Generate Report
+            </a></li>
+        </ul>
+    </div>
+
+
+    <!-- Cards & Documents -->
+    <div>
+        <button type="button"
+            aria-controls="documents-menu"
+            aria-expanded="false"
+            class="flex items-center gap-2.5 cursor-pointer w-full text-sm text-slate-800
+                   font-medium text-left collapsible-toggle hover:bg-slate-100
+                   rounded-md px-3 py-2">
+
+            <span class="flex-1">Cards & Documents</span>
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="arrow size-3 -rotate-90 fill-current"
+                 viewBox="0 0 24 24">
+                <path d="M12.016 18a1.5 1.5 0 0 1-1.065-.434l-9-9
+                         a1.506 1.506 0 0 1 2.13-2.13l7.935
+                         7.95L19.95 6.45a1.5 1.5 0 0 1 2.115
+                         2.115l-9 9a1.5 1.5 0 0 1-1.05.435"/>
+            </svg>
+        </button>
+
+        <ul id="documents-menu"
+            class="space-y-1 text-sm text-slate-600 font-medium px-3 my-1
+                   max-h-0 overflow-hidden transition-all duration-300">
+
+            <li><a href="#" class="block hover:bg-slate-100 rounded-md px-3 py-2">
+                Generate Student Cards
+            </a></li>
+
+            <li><a href="#" class="block hover:bg-slate-100 rounded-md px-3 py-2">
+                Generate Report Cards
+            </a></li>
+
+            <li><a href="#" class="block hover:bg-slate-100 rounded-md px-3 py-2">
+                Print Documents
+            </a></li>
+        </ul>
+    </div>
+
+
+    <!-- Staff -->
+    <div>
+        <button type="button"
+            aria-controls="staff-menu"
+            aria-expanded="false"
+            class="flex items-center gap-2.5 cursor-pointer w-full text-sm text-slate-800
+                   font-medium text-left collapsible-toggle hover:bg-slate-100
+                   rounded-md px-3 py-2">
+
+            <span class="flex-1">Staff</span>
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="arrow size-3 -rotate-90 fill-current"
+                 viewBox="0 0 24 24">
+                <path d="M12.016 18a1.5 1.5 0 0 1-1.065-.434l-9-9
+                         a1.506 1.506 0 0 1 2.13-2.13l7.935
+                         7.95L19.95 6.45a1.5 1.5 0 0 1 2.115
+                         2.115l-9 9a1.5 1.5 0 0 1-1.05.435"/>
+            </svg>
+        </button>
+
+        <ul id="staff-menu"
+            class="space-y-1 text-sm text-slate-600 font-medium px-3 my-1
+                   max-h-0 overflow-hidden transition-all duration-300">
+
+            <li><a href="#" class="block hover:bg-slate-100 rounded-md px-3 py-2">
+                All Staff
+            </a></li>
+
+            <li><a href="#" class="block hover:bg-slate-100 rounded-md px-3 py-2">
+                Add Staff
+            </a></li>
+
+            <li><a href="#" class="block hover:bg-slate-100 rounded-md px-3 py-2">
+                Staff Attendance
+            </a></li>
+        </ul>
+    </div>
+
+
+    <!-- Administration -->
+    <div>
+        <button type="button"
+            aria-controls="admin-menu"
+            aria-expanded="false"
+            class="flex items-center gap-2.5 cursor-pointer w-full text-sm text-slate-800
+                   font-medium text-left collapsible-toggle hover:bg-slate-100
+                   rounded-md px-3 py-2">
+
+            <span class="flex-1">Administration</span>
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="arrow size-3 -rotate-90 fill-current"
+                 viewBox="0 0 24 24">
+                <path d="M12.016 18a1.5 1.5 0 0 1-1.065-.434l-9-9
+                         a1.506 1.506 0 0 1 2.13-2.13l7.935
+                         7.95L19.95 6.45a1.5 1.5 0 0 1 2.115
+                         2.115l-9 9a1.5 1.5 0 0 1-1.05.435"/>
+            </svg>
+        </button>
+
+        <ul id="admin-menu"
+            class="space-y-1 text-sm text-slate-600 font-medium px-3 my-1
+                   max-h-0 overflow-hidden transition-all duration-300">
+
+            <li><a href="#" class="block hover:bg-slate-100 rounded-md px-3 py-2">
+                School Settings
+            </a></li>
+
+            <li><a href="#" class="block hover:bg-slate-100 rounded-md px-3 py-2">
+                Academic Years
+            </a></li>
+
+            <li><a href="#" class="block hover:bg-slate-100 rounded-md px-3 py-2">
+                Users & Roles
+            </a></li>
+        </ul>
+    </div>
+
+</nav>
+<script src="./js/dashboard.js"></script>
+
+</body>
+</html>

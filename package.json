@@ -1,0 +1,33 @@
+{
+  "name": "sql_login",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test",
+    "tailwind:watch": "npx @tailwindcss/cli -i ./public/src/input.css -o ./public/dist/output.css --watch",
+    "server": "nodemon index.js",
+    "dev": "concurrently \"npm run tailwind:watch\" \"npm run server\"",
+    "build": "npx @tailwindcss/cli -i ./public/src/input.css -o ./public/dist/output.css --minify"
+  },
+  "keywords": [],
+  "type": "module",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^18.0.4",
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mysql": "^2.18.1"
+  },
+  "allowScripts": {
+    "bcrypt@6.0.0": true,
+    "@parcel/watcher@2.5.1": true
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5",
+    "nodemon": "^3.1.14",
+    "tailwindcss": "^4.3.3"
+  }
+}
