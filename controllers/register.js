@@ -77,9 +77,14 @@ export const register = async (req, res) => {
 
                         res.cookie('token', token, cookieOptions);
                         return res.status(201).json({
+                            success: true,
                             message: "User registered successfully",
-                            user,
-                            token,
+                            user: {
+                                id: user.id,
+                                name: user.name,
+                                email: user.email
+                            },
+                            token: token,
                         });
                     }
                 );
