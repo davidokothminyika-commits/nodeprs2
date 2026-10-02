@@ -22,8 +22,8 @@ db.connect((err) => {
     console.log("Database connected successfully");
 });
 
-app.use('/', pagesRouter);
-app.use('/api', authRouter);
+app.use('/auth', pagesRouter);
+app.use('/api/auth', authRouter);
 
 app.use((req, res) => {
     res.status(404).sendFile(path.join(import.meta.dirname, 'public', '404.html'));

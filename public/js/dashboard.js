@@ -1,5 +1,5 @@
 
-
+console.log("Cookies", document.cookie);
 document.addEventListener("DOMContentLoaded", () => {
 
     // Sidebar toggle

@@ -1,129 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/dist/output.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+  </style>
 </head>
-<body>
-    
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <style>
-          .divider:after,
-    .divider:before {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: #eee;
-      }
-    .h-custom {
-      height: calc(100% - 73px);
-    }
-    @media (max-width: 450px) {
-      .h-custom {
-    height: 100%;
-    }
-    }
-    </style>
-    <title>Login Page</title>
-</head>
-<body>
-  <section class="vh-100">
-  <div class="container-fluid h-custom">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-md-9 col-lg-6 col-xl-5">
-        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
-          class="img-fluid" alt="Sample image">
-      </div>
-      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-        <form>
-          <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-            <p class="lead fw-normal mb-0 me-3">Sign in with</p>
-            <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
-              <i class="bi bi-facebook" aria-hidden="true"></i>
-            </button>
+<body class="antialiased">
+<!-- Login Page with Image -->
+<main class="min-h-screen flex flex-col items-center justify-center">
+   <div class="py-4 px-4 md:px-8">
+      <div class="grid items-center gap-6 max-w-6xl w-full lg:grid-cols-2">
+         <div class="border border-slate-300 rounded-lg p-6 max-w-md mx-auto shadow-sm md:p-8 lg:mx-0">
 
-            <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
-              <i class="bi bi-twitter" aria-hidden="true"></i>
-            </button>
-
-            <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
-              <i class="bi bi-linkedin" aria-hidden="true"></i>
-            </button>
-          </div>
-
-          <div class="divider d-flex align-items-center my-4">
-            <p class="text-center fw-bold mx-3 mb-0">Or</p>
-          </div>
-
-          <!-- Email input -->
-          <div data-mdb-input-init class="form-outline mb-4">
-            <input type="text" id="userName" class="form-control form-control-lg"
-              placeholder="Enter a valid username" required/>
-            <label class="form-label" for="userName">UserName</label>
-          </div>
-
-          <!-- Password input -->
-          <div data-mdb-input-init class="form-outline mb-3">
-            <input type="password" id="password" class="form-control form-control-lg"
-              placeholder="Enter password" required/>
-            <label class="form-label" for="password">Password</label>
-          </div>
-
-          <div class="d-flex justify-content-between align-items-center">
-            <!-- Checkbox -->
-            <div class="form-check mb-0">
-              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-              <label class="form-check-label" for="form2Example3">
-                Remember me
-              </label>
+            <div class="mb-8">
+               <h1 class="text-slate-900 text-3xl font-bold mb-4">Sign in</h1>
+               <p class="text-slate-600 text-base leading-relaxed">Sign in to your account to access
+                  your dashboard and manage your projects.</p>
             </div>
-            <a href="#!" class="text-body">Forgot password?</a>
-          </div>
 
-          <div class="text-center text-lg-start mt-4 pt-2">
-            <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg"
-              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
-            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
-                class="link-danger">Register</a></p>
-          </div>
+            <form class="space-y-6" id="loginForm">
+               <div>
+                  <label for="userName" class="mb-2 text-slate-900 font-medium text-sm inline-block">userName</label>
+                  <input type="text" id="userName" name="userName" placeholder="john" required="" class="px-3 py-2.5 text-sm text-slate-900 rounded-md bg-white w-full outline-1 -outline-offset-1 outline-slate-300 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600">
+               </div>
+               <div>
+                  <label for="password" class="mb-2 text-slate-900 font-medium text-sm inline-block">Password</label>
+                  <input type="password" id="password" name="password" placeholder="••••••••" required="" class="px-3 py-2.5 text-sm text-slate-900 rounded-md bg-white w-full outline-1 -outline-offset-1 outline-slate-300 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600">
+               </div>
 
-        </form>
+               <div class="flex items-start flex-wrap gap-2">
+                  <label class="flex items-center group has-[input:checked]:text-slate-900">
+                     <input id="remember" name="remember" type="checkbox" required="" class="sr-only">
+                     <!-- Custom box -->
+                     <span class="flex h-4 w-4 shrink-0 items-center justify-center rounded outline-1 outline-slate-300 bg-white group-has-[input:checked]:bg-blue-600 group-has-[input:checked]:outline-blue-600 group-focus-within:outline-2 group-focus-within:outline-blue-600" aria-hidden="true">
+                        <!-- Checkmark -->
+                        <svg class="size-3 text-white opacity-0 group-has-[input:checked]:opacity-100" viewBox="0 0 12 10" fill="none" stroke="currentColor" stroke-width="2">
+                           <path d="M1 5l3 3 7-7"></path>
+                        </svg>
+                     </span>
+                     <span class="ml-3 text-sm text-slate-700">
+                        Remember me
+                     </span>
+                  </label>
+
+                  <a href="#" class="ml-auto text-sm font-medium text-blue-700 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
+                     Forgot password?
+                  </a>
+               </div>
+
+               <button type="submit" class="w-full py-2 px-3.5 text-sm rounded-md font-semibold cursor-pointer tracking-wide text-white border border-blue-600 bg-blue-600 hover:bg-blue-700 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+                  Sign in</button>
+
+               <div class="text-slate-900 text-sm text-center">Don't have an account? <a href="#" class="text-blue-700 hover:underline ml-1 font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">Sign
+                     up</a>
+               </div>
+            </form>
+         </div>
+
+         <div class="aspect-[71/50] max-lg:w-4/5 mx-auto">
+            <img src="https://readymadeui.com/images/integration-illus.webp" class="w-full object-cover" alt="login img">
+         </div>
       </div>
-    </div>
-  </div>
-  <div
-    class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
-    <!-- Copyright -->
-    <div class="text-white mb-3 mb-md-0">
-      Copyright © 2026. All rights reserved.
-    </div>
-    <!-- Copyright -->
-
-    <!-- Right -->
-    <div>
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="#!" class="text-white">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-    </div>
-    <!-- Right -->
-  </div>
-</section>
+   </div>
+</main>
+<script src="/js/login.js"></script>
 </body>
 </html>

@@ -1,9 +1,9 @@
 import express from 'express';
-import { authMiddleware } from '../middleware/authMiddleware.js';
+import { authMiddlewareCookie } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 
-router.get("/", authMiddleware, (req, res) => {
+router.get("/", authMiddlewareCookie, (req, res) => {
     res.sendFile('dashboard.html', { root: "./public" });
 });
 

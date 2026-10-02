@@ -2,7 +2,6 @@ import bcrypt from 'bcrypt';
 // import jwt from 'jsonwebtoken';
 import db from '../config/db.js';
 import { generateToken } from '../controllers/generateToken.js';
-import { generateResetToken } from "../utils/token.js";
 //generate token
 //I created a module I will import
 // const generateToken = (user) => {
@@ -57,12 +56,12 @@ export const register = async (req, res) => {
                 }
 
                 const hashedPassword = await bcrypt.hash(password, 10);
-                const { tokenHash } = generateResetToken();
+                // const { tokenHash } = generateResetToken();
 
                 //insert usert
                 db.query(
-                    'INSERT INTO users (Fname, Lname, email, password, user_name, token_hash) VALUES (?, ?, ?, ?, ?, ?)',
-                    [Fname, Lname, email, hashedPassword, user_name, tokenHash],
+                    'INSERT INTO users (Fname, Lname, email, password, user_name) VALUES (?, ?, ?, ?, ?)',
+                    [Fname, Lname, email, hashedPassword, user_name],
                     (err, result) => {
                         if (err) {
                             console.error(err);
